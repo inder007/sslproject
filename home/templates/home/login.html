@@ -1,0 +1,23 @@
+{% extends 'home/base.html' %}
+{% block head %}
+{% load static %}
+    <link href="{% static "home/login.css" %}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+<div class="container">
+  <div id="login-box">
+    <div class="logo">
+      <img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" class="img img-responsive img-circle center-block"/>
+      <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
+    </div><!-- /.logo -->
+    <div class="controls">
+      <input type="text" name="username" placeholder="Username" class="form-control" />
+      <input type="text" name="username" placeholder="Password" class="form-control" />
+      <button type="button" class="btn btn-default btn-block btn-custom">Login</button>
+    </div><!-- /.controls -->
+  </div><!-- /#login-box -->
+</div><!-- /.container -->
+<div id="particles-js"></div>
+<script src="{% static "home/logi.js" %}"></script>
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>-->
+{% endblock %}
