@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^departments/', include('fpagecse.urls')),
     url(r'^$', views.homepage),
     url(r'login/$', views.login),
+    url(r'signup/$', views.signup),
 ]

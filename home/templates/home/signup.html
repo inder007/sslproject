@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Register Form</title>
+   {% load static %}
+  <link rel="stylesheet" href="{% static "home/reset.min.css" %}">
+  <link rel="stylesheet" href="{% static "home/style.css" %}">
+  <link rel="stylesheet" href="{% static "home/style2.css" %}">
+  <link rel="stylesheet" href="{% static "home/style3.css" %}">
+  <link rel="stylesheet" href="{% static "home/style4.css" %}">
+</head>
+
+<body background="{% static "home/images/abc.png" %}">
+  
+<div class="container">
+  <div class="info">
+  </div>
+</div>
+<div class="form">
+  <div class="thumbnail"><img src="{% static "home/images/logo.png" %}" height="auto" width="auto" ></div>
+
+  <form class="Register-form">
+
+    <input type="text" placeholder="Username">
+    <input type="email" placeholder="Email address">
+
+    <input list="browsers" name="browser" placeholder="Department">
+    <datalist id="browsers">
+    <option value="Biosciences & Bioengineering">
+    <option value="Chemical Engineering">
+    <option value="Chemistry">
+    <option value="Civil Engineering">
+    <option value="Computer Science and Engineering">
+    <option value="Design">
+    <option value="Electronics & Electrical Engg.">
+    <option value="Humanities and Social Sciences">
+    <option value="Mathematics">
+    <option value="Mechanical Engineering">
+    <option value="Physics">
+    </datalist>
+
+    <input type="text" placeholder="Designation">
+    <input type="text" placeholder="Room No.">
+    <input type="number" placeholder="Contact No.">
+    <input type="password" placeholder="Password">
+    <input type="password" placeholder="Confirm password">
+
+    <button> <a href="http://127.0.0.1:8000/"> Register </a> </button>
+    <p class="message">Already registered? <a href="http://127.0.0.1:8000/login/">Sign In</a></p>
+  </form>
+</div>
+<script src="{% static "home/log.js" %}"></script>
+    <script src="{% static "home/index.js" %}"></script>
+
+
+
+</body></html>

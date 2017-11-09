@@ -1,23 +1,41 @@
-{% extends 'home/base.html' %}
-{% block head %}
-{% load static %}
-    <link href="{% static "home/login.css" %}" rel="stylesheet">
-{% endblock %}
-{% block body %}
+
+<!DOCTYPE html>
+<html><head>
+
+  <!--{% block head %}-->
+    {% load static %}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Login Form</title>
+  
+  <link rel="stylesheet" href="{% static "home/reset.min.css" %}">
+  <link rel="stylesheet" href="{% static "home/style.css" %}">
+  <link rel="stylesheet" href="{% static "home/style2.css" %}">
+  <link rel="stylesheet" href="{% static "home/style3.css" %}">
+  <link rel="stylesheet" href="{% static "home/style4.css" %}">
+
+  <!--{% endblock %}-->
+</head>
+<!--{% block aa %}background="{% static "./Flat Login Form_files/abc.png" %}"{% endblock %}-->
+<body background="{% static "home/images/abc.png" %}">
+  <!--{% block body %}-->
 <div class="container">
-  <div id="login-box">
-    <div class="logo">
-      <img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" class="img img-responsive img-circle center-block"/>
-      <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
-    </div><!-- /.logo -->
-    <div class="controls">
-      <input type="text" name="username" placeholder="Username" class="form-control" />
-      <input type="text" name="username" placeholder="Password" class="form-control" />
-      <button type="button" class="btn btn-default btn-block btn-custom">Login</button>
-    </div><!-- /.controls -->
-  </div><!-- /#login-box -->
-</div><!-- /.container -->
-<div id="particles-js"></div>
-<script src="{% static "home/logi.js" %}"></script>
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>-->
-{% endblock %}
+  <div class="info">
+  </div>
+</div>
+<div class="form">
+  <div class="thumbnail"><img src="{% static "home/images/logo.png" %}" height="auto" width="auto" ></div>
+  <form class="login-form">
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <button>Login</button>
+    <p class="message">Not registered? <a href="http://127.0.0.1:8000/signup/">Create an account</a></p>
+  </form>
+</div>
+  <script src="{% static "home/log.js" %}"></script>
+    <script src="{% static "home/index.js" %}"></script>
+<!--{% endblock %}-->
+
+
+</body></html>
