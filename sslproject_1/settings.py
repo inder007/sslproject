@@ -14,7 +14,8 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'home')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -27,10 +28,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+GOOGLE_RECAPTCHA_SECRET_KEY = '6Le0zzoUAAAAACSWAY0WmLrax1Le_Jbj6Q9rpfUW'
 # Application definition
 
 INSTALLED_APPS = [
+    'captcha',
     'fpagecse.apps.FpagecseConfig',
     'django.contrib.admin',
     'django.contrib.auth',

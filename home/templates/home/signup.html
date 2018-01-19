@@ -8,12 +8,37 @@
   <link rel="stylesheet" href="{% static "home/style2.css" %}">
   <link rel="stylesheet" href="{% static "home/style3.css" %}">
   <link rel="stylesheet" href="{% static "home/style4.css" %}">
+    <style>
+.lol:link, .lol:visited {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #339966;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.lol:hover {background-color: #133926}
+
+.lol:active {
+  background-color: #b33300;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
 </head>
 
 <body background="{% static "home/images/abc.png" %}">
 
 <div class="container">
   <div class="info">
+      <a class="lol" href="http://127.0.0.1:8000/"><b>IIT Guwahati</b></a>
   </div>
 </div>
 <div class="form">
@@ -45,10 +70,21 @@
     <!--<input type="number" placeholder="Contact No." name="contact">-->
     <!--<input type="password" placeholder="Password" name="password">-->
     <!--<input type="password" placeholder="Confirm password">-->
-    {{form.as_p}}
-    <!--{% for var in register %}-->
-        <!--<input type="text" placeholder="{{ register. }}">-->
-    <!--{% endfor %}-->
+    <!--{{form.as_p}}-->
+    <!--{{   form }}-->
+      {% for error in form.non_field_errors %}
+            <span class="text-danger small">{{ error }}</span>
+        {% endfor %}
+{% for field in form %}
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <span class="text-danger small">{{ field.errors }}</span>
+
+        </div>
+        <label class="control-label col-sm-2" >{{ field.label_tag }}</label>
+        <div class="col-sm-10" >{{ field }}</div>
+    </div>
+{% endfor %}
 
     <!--<button type="submit" form="fm"> <a href="http://127.0.0.1:8000/"> Register </a> </button>-->
     <input type="submit" form="fm" style="background-color:red">

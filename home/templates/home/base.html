@@ -205,19 +205,19 @@
         /* Fading animation */
         .fade {
               -webkit-animation-name: fade;
-              -webkit-animation-duration: 4.0s;
+              -webkit-animation-duration: 16.0s;
           animation-name: fade;
-          animation-duration: 4.0s;
+          animation-duration: 16.0s;
         }
 
         @-webkit-keyframes fade {
-          from {opacity: 0.4}
-          to {opacity: 1}
+          from {opacity: 3.4}
+          to {opacity: 5}
         }
 
         @keyframes fade {
           from {opacity: 0.4}
-          to {opacity: 1}
+          to {opacity: 7}
         }
 
         /* On smaller screens, decrease text size */
@@ -345,18 +345,18 @@
 
         /* Add Zoom Animation */
         .animate {
-              -webkit-animation: animatezoom 0.6s;
-            animation: animatezoom 0.6s
+              -webkit-animation: animatezoom 1.6s;
+            animation: animatezoom 2.6s
         }
 
         @-webkit-keyframes animatezoom {
             from {-webkit-transform: scale(0)}
-            to {-webkit-transform: scale(1)}
+            to {-webkit-transform: scale(4)}
         }
 
         @keyframes animatezoom {
             from {transform: scale(0)}
-            to {transform: scale(1)}
+            to {transform: scale(5)}
         }
 
         /* Change styles for span and cancel button on extra small screens */
@@ -373,83 +373,53 @@
     {% block head %}
     {% endblock %}
 </head>
-<body {% block aa %}{% endblock %}>
-<header class="navbar navbar-static-top" id="top" role="banner">
+<body {% block aa %}{% endblock %}
+
     <div class="container-fluid page">
-        <div class="navbar-header">
-            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <nav id="main-navbar" class="topnav collapse navbar-collapse">
+        <nav id="main-navbar" class="topnav collapse navbar-collapse" style="background-color:rgb(42,42,42);">
             <a id="mainnav"></a>
-            <ul class="nav navbar-nav navbar-right" role="navigation"><li class="first"><a href="http://127.0.0.1:8000/">HOME</a></li>
-                <li class="dropdown"><a>Departments</a>
+
+            <ul class="nav navbar-nav navbar-right" role="navigation"><li class="first"><a href="http://127.0.0.1:8000/" ><b>HOME</b></a></li>
+                <li class="dropdown"><a><b>Departments</b></a>
                     <div class="dropdown-content">
-                        <a href="http://127.0.0.1:8000/departments/cse">Computer Science and Engineering</a>
-                        <a href="http://127.0.0.1:8000/departments/">Biosciences & Bioengineering</a>
-                        <a href="http://127.0.0.1:8000/departments/">Chemical Engineering</a>
-                        <a href="http://127.0.0.1:8000/departments/">Chemistry</a>
-                        <a href="http://127.0.0.1:8000/departments/">Civil Engineering</a>
-                        <a href="http://127.0.0.1:8000/departments/">Design</a>
-                        <a href="http://127.0.0.1:8000/departments/">Electronics & Electrical Engg.</a>
-                        <a href="http://127.0.0.1:8000/departments/">Humanities and Social Sciences</a>
-                        <a href="http://127.0.0.1:8000/departments/">Mathematics</a>
-                        <a href="http://127.0.0.1:8000/departments/">Mechanical Engineering</a>
-                        <a href="http://127.0.0.1:8000/departments/">Physics</a>
+                        <a href="/departments/Comp">Computer Science and Engineering</a>
+                        <a href="/departments/Bios">Biosciences & Bioengineering</a>
+                        <a href="/departments/chem">Chemical Engineering</a>
+                        <a href="/departments/Chem">Chemistry</a>
+                        <a href="/departments/Civi">Civil Engineering</a>
+                        <a href="/departments/Desi">Design</a>
+                        <a href="/departments/Elec">Electronics & Electrical Engg.</a>
+                        <a href="/departments/Huma">Humanities and Social Sciences</a>
+                        <a href="/departments/Math">Mathematics</a>
+                        <a href="/departments/Mech">Mechanical Engineering</a>
+                        <a href="/departments/Phys">Physics</a>
                     </div>
                 </li>
-                <li><a href="http://127.0.0.1:8000/news/">News</a></li>
-                <li><a href="http://127.0.0.1:8000/contact/">Contact Us</a></li>
-                <li class="last"><a href="http://127.0.0.1:8000/login/">Login</a></li>
-                <!--<li class="last"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>-->
-                <!-- <li id="s"><a href="http://www.uchicago.in/search/" id="search-trigger" class="ss-icon">Search</a></li></ul> -->
-            </nav>
-            <form id="sitesearch" class="search-bar expanded" method="get" action="http://www.uchicago.in/search/results" role="search" style="">
-                <div class="search-bar-inner">
-                    <div class="wrap">
-                        <label for="searchtext" class="search-bar-help">Enter Search Below</label>
-                        <input type="text" name="GSAq" id="searchtext" class="search-field" value="" autocomplete="off" placeholder="Search…">
-                        <button type="submit" class="search-submit ss-icon" disabled="">Search</button>
-                    </div>
-                </div>
-            </form>
+                <li><a href="#bottom"><b>News</b></a></li>
+                <li><a href="#bottom"><b>Contact Us</b></a></li>
+                <li class="last"><a href="http://127.0.0.1:8000/login/"><b>Login</b></a></li>
+            </ul>
+        </nav>
+
 
         </div>
-    </header>
-<!--<div class="topnav" id="myTopnav">-->
-  <!--<a href="#home">Home</a>-->
-  <!--<a href="#news">News</a>-->
-  <!--<a href="#contact">Contact</a>-->
-  <!--<div class="dropdown">-->
-    <!--<button class="dropbtn">Dropdown-->
-      <!--<i class="fa fa-caret-down"></i>-->
-    <!--</button>-->
-    <!--<div class="dropdown-content">-->
-      <!--<a href="#">Link 1</a>-->
-      <!--<a href="#">Link 2</a>-->
-      <!--<a href="#">Link 3</a>-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>-->
-<!--</div>-->
 
+<div style="background-color: black;margin:-23px;"  class="wthree_agile_top_header">
+    <div class="col-sm-1">
+    </div>
+              <div class="col-sm-2">
+                  <a href="http://127.0.0.1:8000/">
+                <img class="profile-image img-responsive pull-left" src="{% static 'home/images/iitg_logo.png' %}" alt="IIT Guwahati" style="height:120px;width:120px;" title="IIT Guwahati"/>
+                  </a>
+            </div>
+				<div class="logo-agileits">
+                    <h1 style="color: white;"><a style="color:off white;font-family:Acherus Militant;text-align:right;" href="http://127.0.0.1:8000/"><b>Indian Institue of Technology, Guwahati</b></a></h1>
+                    <h2 style="color: white;"><b>Faculty Information Portal</b></h2>
+				</div>
 
+				<div class="clearfix"> </div>
+			</div>
 
-
-<!--<script>-->
-<!--function myFunction() {-->
-    <!--var x = document.getElementById("myTopnav");-->
-    <!--if (x.className === "topnav") {-->
-        <!--x.className += " responsive";-->
-    <!--} else {-->
-        <!--x.className = "topnav";-->
-    <!--}-->
-<!--}-->
-<!--</script>-->
 {% block ab %}{% endblock %}
 
 {% block body %}
